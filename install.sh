@@ -45,7 +45,7 @@ fi
 sleep 3
 clear
 
-# Generate GPG key
+###   Generate GPG key   ################################################
 gpg --batch --full-generate-key <<EOF
     Key-Type: RSA
     Key-Length: 4096
@@ -53,7 +53,7 @@ gpg --batch --full-generate-key <<EOF
     Subkey-Length: 4096
     Name-Real: $full_name
     Name-Email: $email_address
-    Expire-Date: 1y
+   Expire-Date: 1y
     Passphrase: $passphrase
     %commit
 EOF
